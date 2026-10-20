@@ -1,0 +1,4 @@
+timestamp_utc,source_ip,destination_ip,protocol,source_port,destination_port,packet_length_bytes
+2026-10-17T13:08:50+00:00,192.0.2.10,198.51.100.20,TCP,51515,443,40
+2026-10-17T13:08:50+00:00,192.0.2.11,198.51.100.21,UDP,53000,53,28
+2026-10-17T13:08:50+00:00,192.0.2.12,198.51.100.22,ICMP,,,28
