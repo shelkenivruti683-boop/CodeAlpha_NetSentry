@@ -21,7 +21,19 @@ NETSENTRY is a Python-based network traffic analysis project that captures and a
 - Pandas
 - Streamlit
 - CSV
+## Dashboard Screenshots
 
+### Demo Dashboard
+![NETSENTRY Demo Dashboard](docs/screenshots/demo-dashboard.png)
+
+### Live Packet Capture
+![Live Capture Controls](docs/screenshots/live-capture.png)
+
+### Traffic Analysis
+![Traffic Analysis](docs/screenshots/traffic-analysis.png)
+
+### Packet Records and CSV Export
+![Packet Records](docs/screenshots/packet-records.png)
 ## Project Structure
 
 ```text
