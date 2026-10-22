@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+from network_sniffer.alerts import detect_traffic_alerts
 from network_sniffer.analyzer import analyze_packet
 from network_sniffer.capture import demo_packets
 from network_sniffer.exporter import export_csv
@@ -76,6 +76,18 @@ if "traffic_df" in st.session_state:
             },
         )
         st.plotly_chart(fig, use_container_width=True)
+    st.subheader("Traffic Alerts")
+
+    alert_records = df.to_dict(orient="records")
+    alerts = detect_traffic_alerts(alert_records)
+
+    for alert in alerts:
+        if alert == "No alerts triggered.":
+            st.success(alert)
+        elif alert == "No traffic data available to analyze.":
+            st.info(alert)
+        else:
+            st.warning(alert)
 
     st.subheader("Packet Details")
 
